@@ -15,7 +15,7 @@ const app = express();
 
 const allowedOrigins = [
   "http://localhost:5173",
-  "https://vdt-son-frontend-2.vercel.app/", // Thay bằng link frontend của m, thường là thay sau khi host, cứ để tạm r host được frontend r thay sau
+  "https://vdt-son-frontend-2.vercel.app", // Thay bằng link frontend của m, thường là thay sau khi host, cứ để tạm r host được frontend r thay sau
 ];
 
 app.use(

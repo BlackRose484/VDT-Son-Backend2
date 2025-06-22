@@ -6,10 +6,9 @@ import cookie from "cookie-parser";
 import router from "./routes/index";
 import path from "path";
 import bodyParser from "body-parser";
-import '../src/jobs/deleteExpiredTrash';
 
 mongoose.connect(process.env.MONGODB_CONNECTION_STRING as string);
-if(mongoose.connection) {
+if (mongoose.connection) {
   console.log("Connected to MongoDB");
 }
 const app = express();
@@ -18,7 +17,6 @@ const allowedOrigins = [
   "http://localhost:5173",
   "https://vdt-dms-frontend.vercel.app", // Thay bằng link frontend của m, thường là thay sau khi host, cứ để tạm r host được frontend r thay sau
 ];
-
 
 app.use(
   cors({
@@ -32,7 +30,6 @@ app.use(
     credentials: true,
   })
 );
-
 
 app.use(cookie());
 
